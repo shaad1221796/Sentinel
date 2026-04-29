@@ -33,9 +33,11 @@ CORS(app)
 
 # ── PATHS ─────────────────────────────────────────────────────────────────────
 # Your exact file paths — update the filename if yours differs
-MODELS_DIR         = r"C:\Users\96896\Downloads\Sentinel\backend\models"
-WEIGHTS_PATH       = os.path.join(MODELS_DIR, "IDS_model_weights.weights.h5")
-SCALER_PATH        = os.path.join(MODELS_DIR, "scaler.save")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODELS_DIR = os.path.join(BASE_DIR, "models")
+
+WEIGHTS_PATH = os.path.join(MODELS_DIR, "IDS_model_weights.weights.h5")
+SCALER_PATH = os.path.join(MODELS_DIR, "scaler.save")
 LABEL_ENCODER_PATH = os.path.join(MODELS_DIR, "label_encoder.save")
 
 
